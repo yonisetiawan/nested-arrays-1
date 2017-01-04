@@ -4,10 +4,11 @@ function chessboard() {
     var pion = [" Pion"]
     var papan = [];
     for (var i = 0; i < 8; i++) {
-        papan.push([])
+        var tampung = []
         for (var j = 0; j < 8; j++) {
-            papan[i].push("")
+            tampung.push("")
         }
+        papan.push(tampung)
     }
     for (var i = 0; i < 8; i++) {
             papan[0][i] = pemain[i] + warna[0]
@@ -17,6 +18,6 @@ function chessboard() {
     }
     // return papan;
     // console.log("++++++++++++++++++++++");
-    return papan[7][0]
+    return papan[7][0] == "Benteng Putih"
 }
 console.log(chessboard())
